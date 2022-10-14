@@ -49,13 +49,11 @@
               jibunAddress = data.jibunAddress;
             }
 
-            var postData = {
+            var postData = JSON.stringify({
               roadAddress: data.roadAddress,
               jibunAddress: jibunAddress,
               zonecode: data.zonecode,
-            };
-            console.log(postData);
-            hmm = postData;
+            });
             window.postMessageToiOS(postData);
           },
           width: "100%",
